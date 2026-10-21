@@ -1,0 +1,9 @@
+{
+  "name": "Univaram Gateway",
+  "description": "Buy Us a Coffee for Univaram (built by univaram.in). Direct peer-to-peer voluntary donations in multiples of ₹18 to univaram@centralbank with 0% platform commission.",
+
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,851 @@
+# MASTER PROMPT: BUILD UNIVARAM GATEWAY
+
+## 1. Project Overview
+
+Build a complete, professional, responsive web application named **Univaram Gateway**, developed by Univaram and created by Divyanshu Verma.
+
+**Reference website:** https://www.chai4.me/
+
+Study the reference website's publicly visible design, page structure, navigation, creator-support experience, and user journey. Use it as inspiration for building an independently implemented product with original branding, original copy, and a polished interface.
+
+Univaram Gateway is a creator-support platform designed primarily for India. It allows eligible creators to create personalized public pages, share them with their audience, and receive voluntary support through UPI.
+
+The platform should make it easy for creators to share their work and for supporters to contribute directly using their preferred UPI application.
+
+Build a real, functional application, not merely a landing page or static mockup.
+
+### Official identity
+
+- Product name: Univaram Gateway
+- Developer: Univaram
+- Creator: Divyanshu Verma
+- Product category: Creator support and UPI tip pages
+- Primary market: India
+- Primary payment method: UPI
+- Suggested tagline: Your Work. Your Community. Your Support.
+- Browser title: Univaram Gateway — Support the Creators You Love.
+
+Do not use Chai4.me's name, logo, proprietary code, or protected assets in the finished product.
+
+## 2. Technology Stack
+
+Use:
+
+- React
+- TypeScript
+- Vite, if appropriate for the project
+- Modern CSS or the existing styling framework
+- Lucide icons
+- A secure backend for accounts, creator profiles, and persistent data
+- PostgreSQL or another suitable database
+- Secure authentication
+- UPI payment links and QR codes
+- Environment variables for server-side secrets
+
+Use the existing Google AI Studio project configuration where possible.
+
+If the application is initially built as a frontend-only prototype, provide a working local demonstration and clearly identify which features require backend configuration.
+
+Do not pretend that authentication, payment verification, or persistent cloud storage is operational until it has actually been configured.
+
+## 3. Reference Website Analysis
+
+Before implementation, inspect the publicly accessible reference website:
+
+https://www.chai4.me/
+
+Study its visible:
+
+- Header and navigation
+- Hero section
+- Page width and spacing
+- Typography and colors
+- Feature sections
+- Creator-support messaging
+- Testimonials and social proof
+- Call-to-action buttons
+- Footer
+- Responsive layout
+
+If the website allows public access to additional relevant pages, inspect them to understand the product journey.
+
+Recreate the general quality, layout hierarchy, and ease of use, but establish a distinct Univaram Gateway identity.
+
+Do not copy exact marketing paragraphs, testimonials, proprietary assets, or source code.
+
+## 4. Brand Identity and Design
+
+Create a professional visual identity for Univaram Gateway.
+
+### Design direction
+
+Use a modern, minimal, trustworthy fintech-inspired aesthetic.
+
+Include:
+
+- Clean typography
+- A consistent color palette
+- Clear visual hierarchy
+- Balanced whitespace
+- Subtle borders and shadows
+- Rounded cards and buttons
+- Professional icons
+- Accessible color contrast
+- Smooth, restrained transitions
+- Responsive navigation
+
+Use a light theme as the default unless the reference suggests a better fit. A dark theme may be added as an optional preference.
+
+Keep the design polished without excessive gradients, unnecessary animations, or a generic dashboard appearance.
+
+### Logo
+
+Create a simple original text-based logo reading **Univaram Gateway**, optionally combined with a gateway, link, or abstract connection symbol.
+
+Do not imitate the Chai4.me logo.
+
+Use the same brand identity throughout the homepage, dashboards, creator pages, authentication screens, payment instructions, and footer.
+
+## 5. Main Website Structure
+
+Build the following pages:
+
+1. Homepage
+2. How It Works
+3. Creator discovery page
+4. Individual public creator pages
+5. Sign-up page
+6. Sign-in page
+7. Creator onboarding
+8. Creator dashboard
+9. Public profile editor
+10. Support and payment page
+11. Support history
+12. Account settings
+13. About page
+14. Frequently Asked Questions
+15. Contact page
+16. Privacy Policy
+17. Terms of Service
+18. Payment and refund information
+
+Create a consistent navigation system and meaningful routes for each page.
+
+Public creator pages should have readable, shareable URLs, such as:
+
+`univaram.in/gateway/creator-username`
+
+Treat this as an example route, not a claim that the domain or routing has already been configured.
+
+## 6. Homepage
+
+Create an attractive landing page introducing Univaram Gateway.
+
+### Navigation
+
+Include:
+
+- Univaram Gateway logo
+- Home
+- Explore Creators
+- How It Works
+- Sign In
+- Get Started
+
+Use a responsive mobile navigation menu.
+
+### Hero section
+
+Suggested headline:
+
+**Your Passion Deserves Support.**
+
+Suggested supporting text:
+
+"Give your audience a simple way to support what you create. Build your personalized Univaram Gateway page, share your work, and let supporters contribute through UPI."
+
+Primary CTA: Create Your Page
+
+Secondary CTA: Explore Creators
+
+Include an original illustration or visual composition that communicates creators, community, and digital support.
+
+### Feature highlights
+
+Include three core benefits:
+
+**Direct UPI Support**
+
+Give supporters a convenient way to contribute using compatible UPI applications.
+
+**Your Personal Support Page**
+
+Create a personalized page to introduce your work, share links, and receive voluntary contributions.
+
+**Transparent Pricing**
+
+Clearly explain the platform's actual fees. If Univaram Gateway charges no platform commission, state this only after that policy is established and implemented.
+
+### Additional homepage sections
+
+Add:
+
+- How It Works
+- Supported creator categories
+- Benefits for creators
+- Frequently asked questions
+- Final call to action
+- Professional footer
+
+Avoid fake statistics, invented user counts, fabricated testimonials, or unverified claims about payment speed.
+
+## 7. How It Works
+
+Create a clear three-step explanation.
+
+**Step 1 — Create Your Account**
+
+Register and complete the required onboarding information.
+
+**Step 2 — Personalize Your Page**
+
+Add a display name, username, profile image, description, work links, and supported payment details.
+
+**Step 3 — Share and Receive Support**
+
+Share your public page with your audience. Supporters can open the page, select an amount, and continue through the available UPI payment flow.
+
+Clearly explain that successful payments depend on the payment application, the participating payment providers, and the user's bank.
+
+Do not claim that every payment is instantly settled or verified unless the integration supports that claim.
+
+## 8. Authentication
+
+Implement a secure account system.
+
+Support sign-up, sign-in, sign-out, and password recovery.
+
+Where available, use a reputable authentication provider or a properly implemented backend authentication system.
+
+Requirements:
+
+- Validate input on the server.
+- Use secure password handling if passwords are managed by the application.
+- Use secure session management.
+- Protect authenticated routes.
+- Prevent unauthorized access to dashboards.
+- Add rate limits to sensitive authentication endpoints.
+- Provide clear validation and error messages.
+- Never store passwords in plain text.
+- Never put secret keys in frontend source code.
+
+If Google sign-in is offered, configure the required provider credentials and callback URLs.
+
+Do not simulate successful authentication in the production version.
+
+## 9. Creator Onboarding
+
+After registration, guide the creator through a simple onboarding process.
+
+Collect only necessary information.
+
+Suggested fields:
+
+- Display name
+- Unique username
+- Short biography
+- Profile image
+- Creator category
+- Public social or portfolio links
+- UPI ID, if using direct UPI payments
+- Optional suggested support amounts
+
+Possible creator categories:
+
+- Writers
+- Developers
+- Designers
+- Artists
+- Educators
+- Musicians
+- Content creators
+- Open-source contributors
+- Other independent creators
+
+Validate usernames and prevent duplicates.
+
+Validate profile links and basic input formats.
+
+Explain which information will be publicly visible and which will remain private.
+
+Do not publish a creator's private account details or sensitive information.
+
+## 10. Creator Public Pages
+
+Every creator should have an individual public support page.
+
+Example:
+
+`/gateway/divyanshu-verma`
+
+The actual username should be configurable and unique.
+
+### Page layout
+
+Include:
+
+- Creator profile image
+- Display name
+- Username
+- Short biography
+- Creator category
+- Optional portfolio and social links
+- Custom welcome message
+- Suggested support amounts
+- Custom amount input
+- Support button
+- UPI payment instructions
+- Optional list of creator projects
+
+Use a responsive layout that looks good when shared through messaging applications and social media.
+
+### Personalization
+
+Allow creators to customize:
+
+- Profile image
+- Display name
+- Biography
+- Page accent color from approved choices
+- Welcome message
+- Support amount suggestions
+- Public links
+- Optional project descriptions
+
+Keep customization simple and prevent user input from injecting scripts or unsafe HTML.
+
+### Public page requirements
+
+- Each published profile must have a unique URL.
+- Profile owners can edit their own pages.
+- Unpublished profiles must not appear in public discovery.
+- Owners must not be able to edit other users' profiles.
+- Add appropriate empty states for incomplete profiles.
+- Support social sharing metadata where possible.
+
+## 11. UPI Payment Experience
+
+Implement a transparent, safe, and functional UPI support flow.
+
+### Supporter journey
+
+1. The supporter opens a creator's public page.
+2. The supporter selects a suggested amount or enters a custom amount.
+3. The application validates the amount.
+4. The application displays the creator's name and intended contribution.
+5. The supporter selects the available payment option.
+6. The application opens a compatible UPI payment application or presents a scannable UPI QR code.
+7. The supporter completes or cancels the payment in their payment application.
+8. The website displays accurate next steps.
+
+### Direct UPI integration
+
+Where direct UPI payments are used, generate the appropriate UPI payment URI using the creator's configured payment identifier and the chosen amount.
+
+For example, a payment URI may contain parameters for:
+
+- Payee UPI ID
+- Payee display name
+- Amount
+- Currency
+- Transaction note
+
+Use properly encoded parameters and validate the amount and recipient before generating the payment URI.
+
+Support a QR code that contains the same valid payment information when appropriate.
+
+Do not hardcode a real creator's UPI ID as a universal recipient.
+
+Do not use a fake payment screen to simulate a successful transaction.
+
+### Payment verification limitations
+
+A UPI link or QR code alone does not prove that a payment succeeded.
+
+Unless an authorized payment provider or verified server-side payment mechanism is integrated, clearly explain that the platform cannot independently confirm payment completion.
+
+Do not display a payment as verified merely because a supporter clicked a button or returned to the website.
+
+Do not ask users to submit their UPI PIN, banking password, OTP, or payment application credentials to Univaram Gateway.
+
+Never store these secrets.
+
+## 12. Optional Payment Provider Integration
+
+Design the payment layer so a compliant payment provider can be integrated later if required.
+
+Before implementing a payment provider:
+
+- Select an appropriate provider.
+- Configure its official credentials securely.
+- Follow its onboarding and compliance requirements.
+- Implement server-side order creation.
+- Verify payment status using the provider's documented server-side mechanisms.
+- Validate webhook signatures.
+- Make transaction processing idempotent.
+- Handle failed, cancelled, pending, and successful payments.
+- Reconcile payment records correctly.
+
+Never trust an amount, recipient, or payment-success flag supplied only by the frontend.
+
+Do not claim that provider integration is live until it has been configured and tested.
+
+## 13. Creator Dashboard
+
+Build a professional creator dashboard.
+
+Include:
+
+- Overview
+- Public page status
+- Profile editing
+- Page preview
+- Payment instructions
+- Support history, where data is legitimately available
+- Account settings
+- Share page action
+
+### Overview
+
+Display relevant statistics only when reliable data exists.
+
+Possible metrics:
+
+- Total verified support received
+- Number of verified contributions
+- Recent activity
+- Public page visits, if analytics are implemented
+- Profile completion status
+
+Distinguish between verified transactions and unverified self-reported support.
+
+If no verified transaction integration exists, show an honest setup message rather than fabricated earnings.
+
+### Profile editor
+
+Allow creators to edit their own public information.
+
+Include form validation, save feedback, preview functionality, and error handling.
+
+Unsaved changes should be handled clearly.
+
+## 14. Support History
+
+Implement a support history page appropriate to the actual payment integration.
+
+Each available record may contain:
+
+- Transaction reference
+- Creator
+- Amount
+- Date
+- Payment status
+- Payment method
+
+Do not fabricate transaction records.
+
+For direct UPI payments that cannot be verified by the platform, do not mark contributions as verified.
+
+Clearly distinguish between payment attempts, confirmed payments, and self-reported support.
+
+If transaction history is unavailable, explain why and provide a useful setup or information state.
+
+## 15. Creator Discovery
+
+Create an Explore Creators page.
+
+Include:
+
+- Search by creator name or username
+- Filter by category
+- Responsive creator cards
+- Profile images
+- Short descriptions
+- View Profile links
+
+Only display profiles that creators have chosen to publish.
+
+Use real profiles from the database once configured.
+
+For an initial demonstration, use clearly identified sample profiles that are not represented as real customers or paying users.
+
+Avoid fake follower counts, fabricated earnings, or misleading popularity indicators.
+
+## 16. Dashboard Security and Data Model
+
+Create a clear data model for:
+
+### User
+
+- Unique ID
+- Email or supported login identifier
+- Account creation timestamp
+- Account status
+
+### CreatorProfile
+
+- Unique profile ID
+- User ID
+- Username
+- Display name
+- Biography
+- Profile image
+- Category
+- Public links
+- UPI payment identifier, if configured
+- Published status
+- Created and updated timestamps
+
+### PaymentRecord
+
+- Unique internal ID
+- Creator ID
+- Amount
+- Currency
+- Provider reference, where applicable
+- Payment status
+- Created timestamp
+- Verified timestamp, where applicable
+
+### SupportPageSettings
+
+- Creator ID
+- Theme preferences
+- Suggested amounts
+- Welcome message
+- Public display settings
+
+Use database constraints and appropriate relationships.
+
+Keep private data separate from publicly readable profile data.
+
+Enforce authorization at the backend and database level. Hiding a button in the frontend is not sufficient security.
+
+## 17. Database and Backend
+
+If a backend is required, use a suitable supported service such as Firebase, Supabase, or a secure custom API.
+
+Choose one primary approach instead of mixing unrelated services unnecessarily.
+
+Requirements:
+
+- Secure authentication
+- Persistent creator profiles
+- Unique usernames
+- Server-side validation
+- Authorization checks
+- Protected account settings
+- Rate limiting
+- Safe image upload handling
+- Error logging without leaking secrets
+- Database migrations or schema documentation
+- Environment variable configuration
+
+Do not expose service-role keys, private API keys, database passwords, or payment secrets in frontend code.
+
+Provide clear setup instructions for any required environment variables.
+
+## 18. Image Uploads
+
+Allow creators to upload profile images.
+
+Requirements:
+
+- Validate allowed file types.
+- Enforce file-size limits.
+- Validate uploads on the server.
+- Generate safe storage names.
+- Handle upload errors.
+- Provide an image preview.
+- Allow replacing or removing an image.
+- Avoid exposing private storage buckets.
+
+Use appropriate image optimization and responsive display.
+
+Do not require profile images to be uploaded if a creator prefers a generated initials avatar.
+
+## 19. Notifications and Feedback
+
+Create consistent feedback for important actions.
+
+Examples:
+
+- Account created
+- Profile saved
+- Username unavailable
+- Public page published
+- Payment instructions opened
+- Payment pending verification
+- Payment cancelled
+- Settings updated
+- Upload failed
+
+Use accessible toast notifications or inline messages.
+
+Do not display a payment-success notification unless the actual integration supports verification.
+
+## 20. Legal and Trust Pages
+
+Create original, professional pages for:
+
+- About
+- Contact
+- Privacy Policy
+- Terms of Service
+- Payment Policy
+- Refund and Dispute Policy
+- Frequently Asked Questions
+
+Explain accurately:
+
+- What data the service collects
+- How account information is used
+- How public creator pages work
+- How payment links and QR codes work
+- What the platform can and cannot verify
+- Any actual platform fees
+- How users can contact the service
+- How users can request account deletion
+- How disputes are handled
+
+Do not claim regulatory approvals, financial licenses, or compliance certifications without evidence.
+
+Have legal and payment terms reviewed as appropriate before launch.
+
+## 21. About Univaram Gateway
+
+Create an About page with the following original description:
+
+"Univaram Gateway is a creator-support platform developed by Univaram. It is designed to help independent creators present their work and give their audiences a convenient way to offer support. With a focus on simplicity, transparency, and accessible digital experiences, Univaram Gateway aims to make supporting creative work easier."
+
+### Developer credit
+
+**Univaram Gateway**  
+Developed by Univaram  
+Created by Divyanshu Verma
+
+Keep the developer credit consistent with the application's footer and project documentation.
+
+## 22. Footer
+
+Use the following professional footer line:
+
+© 2026 Univaram Gateway. Developed by Univaram, created by Divyanshu Verma. All rights reserved.
+
+Include links to:
+
+- About
+- How It Works
+- Contact
+- FAQ
+- Privacy Policy
+- Terms of Service
+- Payment Policy
+
+Make sure all footer links lead to implemented pages.
+
+## 23. SEO and Sharing
+
+Implement basic search engine optimization.
+
+Include:
+
+- Unique page titles
+- Relevant meta descriptions
+- Canonical URL configuration when the production domain is known
+- Open Graph metadata
+- Social sharing previews
+- Descriptive image alt text
+- Clean URLs
+- A sitemap and robots.txt where appropriate
+
+Public creator pages should use their own titles and descriptions.
+
+Do not expose private account information through metadata or public indexing.
+
+Only generate sitemap entries for pages that are intended to be public.
+
+## 24. Accessibility and Responsive Design
+
+Follow accessibility best practices.
+
+- Semantic HTML
+- Keyboard-accessible navigation
+- Visible focus indicators
+- Accessible form labels
+- Sufficient contrast
+- Clear validation messages
+- Accessible dialogs
+- Responsive image handling
+- Reduced-motion support
+
+Test mobile, tablet, laptop, and desktop layouts.
+
+On mobile:
+
+- Use a compact navigation menu.
+- Stack cards and forms appropriately.
+- Make buttons comfortable to tap.
+- Prevent horizontal overflow.
+- Keep payment instructions readable.
+- Ensure QR codes display at a useful size.
+- Make creator pages easy to share.
+
+## 25. Performance
+
+Optimize for fast loading and reliable navigation.
+
+- Avoid unnecessary dependencies.
+- Optimize uploaded images.
+- Use lazy loading for non-critical images.
+- Minimize unnecessary rerenders.
+- Avoid unnecessary external API requests.
+- Handle loading and error states.
+- Keep public pages lightweight.
+- Avoid adding analytics or tracking by default.
+
+## 26. Error Handling
+
+Handle:
+
+- Invalid usernames
+- Duplicate usernames
+- Failed sign-in
+- Expired sessions
+- Unauthorized access
+- Failed database requests
+- Failed image uploads
+- Invalid payment amounts
+- Missing payment details
+- Unsupported UPI applications
+- Cancelled payment attempts
+- Pending payments
+- Failed payment verification
+- Missing backend configuration
+
+Show understandable error messages and recovery actions.
+
+Never silently discard profile edits or claim that an action succeeded when it did not.
+
+## 27. Suggested Project Structure
+
+Organize the project in a maintainable structure such as:
+
+src/
+- components/
+  - Header.tsx
+  - Footer.tsx
+  - Hero.tsx
+  - FeatureSection.tsx
+  - CreatorCard.tsx
+  - CreatorProfile.tsx
+  - SupportForm.tsx
+  - UpiPayment.tsx
+  - QrCode.tsx
+  - DashboardLayout.tsx
+  - ProfileEditor.tsx
+  - PaymentHistory.tsx
+  - Toast.tsx
+- pages/
+  - HomePage.tsx
+  - ExplorePage.tsx
+  - CreatorPage.tsx
+  - SignUpPage.tsx
+  - SignInPage.tsx
+  - DashboardPage.tsx
+  - AboutPage.tsx
+  - FAQPage.tsx
+  - ContactPage.tsx
+  - PrivacyPage.tsx
+  - TermsPage.tsx
+- services/
+  - auth.ts
+  - profiles.ts
+  - payments.ts
+  - storage.ts
+- types/
+  - user.ts
+  - creator.ts
+  - payment.ts
+- App.tsx
+- main.tsx
+- styles.css
+
+Adapt this structure to the project's existing configuration. Do not duplicate files or break existing functionality.
+
+## 28. Testing Requirements
+
+Test the following before declaring the project complete:
+
+- Homepage loads correctly.
+- Navigation and footer links work.
+- Authentication works when configured.
+- Unauthenticated users cannot access protected dashboard data.
+- Duplicate usernames are rejected.
+- Creators can create and edit their own profiles.
+- Public profile URLs resolve correctly.
+- Unpublished profiles remain private.
+- Search and category filters work.
+- Suggested support amounts work.
+- Custom amounts are validated.
+- UPI links contain the correct recipient and amount.
+- QR codes encode the intended payment information.
+- Unsupported payment applications are handled gracefully.
+- Unverified payments are not marked successful.
+- Database access rules prevent unauthorized changes.
+- Image uploads are validated.
+- Responsive layouts work on mobile and desktop.
+- Errors are shown clearly.
+- No secret keys are exposed in the frontend.
+- No major buttons are non-functional.
+
+Run available build checks and resolve critical errors.
+
+## 29. Implementation Workflow
+
+Follow this order:
+
+1. Inspect the reference website.
+2. Review the existing Google AI Studio project.
+3. Establish Univaram Gateway's design system.
+4. Build the responsive homepage.
+5. Implement navigation and public pages.
+6. Build authentication and creator onboarding.
+7. Implement public creator profiles.
+8. Build the creator dashboard and profile editor.
+9. Implement the UPI payment-link and QR-code flow.
+10. Configure backend services where credentials are available.
+11. Add payment verification only through a supported, configured mechanism.
+12. Build creator discovery and support history.
+13. Implement legal, trust, and help pages.
+14. Add validation, accessibility, and error handling.
+15. Test the complete user journey.
+16. Fix build errors and incomplete interactions.
+
+## 30. Final Instructions
+
+Build the actual Univaram Gateway application inside the current Google AI Studio project.
+
+Do not stop after generating a landing page.
+
+Do not return only a plan or a code example.
+
+Implement the application, create the necessary files, and test the available functionality.
+
+Use original Univaram Gateway branding throughout.
+
+Do not fabricate creator accounts, customer testimonials, transaction records, payment confirmations, or user statistics.
+
+Where external credentials or services are required, explain what needs to be configured and provide a useful working alternative until the integration is available.
+
+**The final result should be a professional, responsive, secure, and maintainable creator-support platform inspired by the reference website's general concept, with a distinct identity as Univaram Gateway, developed by Univaram and created by Divyanshu Verma.**

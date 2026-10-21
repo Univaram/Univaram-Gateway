@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Custom sleek scrollbar for body and scrollable containers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Modal specific custom scrollbar with Firefox fallback */
+.modal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #f59e0b #f8fafc;
+}
+
+.modal-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.modal-scrollbar::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 8px;
+}
+.modal-scrollbar::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 8px;
+}
+.modal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
